@@ -122,7 +122,7 @@ module "my_autoscaling_group" {
 Authors
 =======
 
-Created and maintained by [Brandon Burton](https://github.com/solarce) (brandon@inatree.org).
+Originally created by [Brandon Burton](https://github.com/solarce) (brandon@inatree.org).
 
 License
 =======
