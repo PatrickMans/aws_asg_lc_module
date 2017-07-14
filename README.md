@@ -1,4 +1,4 @@
-tf_aws_asg_elb
+aws_asg_lc_module
 ==============
 A Terraform module for creating an Auto-Scaling Group and a launch
 configuration for it, for use with an Elastic Load Balancer.
@@ -9,6 +9,8 @@ This module makes the following assumptions:
 * *You want to associate the ASG with an ELB*
 * Your instances behind the ELB will be in a VPC
 * Your using a single Security Group for all instances in the ASG
+
+Based on the terraform module, accepting a standard user_data template instead of a file.
 
 Input Variables
 ---------------
@@ -26,7 +28,7 @@ Input Variables
       same template as this module, e.g. "${module.sg_web.security_group_id_web}"
     - It needs to be customized based on the name of your module resource.
    should use.
-- `user_data` - The path to the user_data file for the Launch Configuration.
+- `user_data` - The user_data template to apply to the instances.
     - Terraform will include the contents of this file in the Launch Configuration.
 - `asg_name` - The Auto-Scaling group name.
 - `asg_number_of_instances` - The number of instances we want in the ASG
