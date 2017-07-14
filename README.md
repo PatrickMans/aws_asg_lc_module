@@ -68,7 +68,7 @@ You can use these in your terraform template with the following steps.
 
 ```
 module "my_autoscaling_group" {
-  source = "github.com/terraform-community-modules/tf_aws_asg_elb"
+  source = "github.com/relybv/aws_asg_lc_module"
   lc_name = "${var.lc_name}"
   ami_id = "${var.ami_id}"
   instance_type = "${var.instance_type}"
